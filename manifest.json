@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Luogu Plus - Luogu 加大杯",
+  "version": "1.0.0",
+  "description": "美化洛谷界面并去除广告",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [{
+    "matches": [
+        "https://www.luogu.com.cn/",
+        "https://www.luogu.com.cn/problem/*",
+        "https://www.luogu.com.cn/training/*",
+        "https://www.luogu.com.cn/contest/*",
+        "https://www.luogu.com.cn/discuss/*"
+      ],
+    "js": ["content.js"],
+    "run_at": "document_end"
+  }],
+  "host_permissions": [
+    "https://www.luogu.com.cn/*"
+  ]
+}
